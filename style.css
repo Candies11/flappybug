@@ -1,0 +1,764 @@
+
+        body {
+            background: url(./Untitled\ design\ \(15\).png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            
+
+
+                font-family: "Special Elite", system-ui;
+                
+            margin: 20px 0px;
+        
+            display: flex;
+            flex-direction: column;
+          
+        }
+        .oppx-1{
+            width: 100%;
+            display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        
+        }
+        .oppx {
+            width: 100%;
+           
+
+           
+        }
+        canvas {
+            box-shadow: 0 0 4px rgb(130, 130, 130);
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            touch-action: none;
+            display: none; /* Hide canvas by default */
+        }
+        .sidebar {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 385px;
+            text-align: center;
+          position: relative;
+          left: 35%;
+          
+            
+            color: rgb(0, 0, 0);
+        }
+        .op{
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (max-width: 1100px) {
+            .sidebar {
+                position: relative;
+                left: 30%;
+            }
+        }
+       
+        @media (max-width: 900px) {
+            .sidebar {
+                position: relative;
+                left: 26%;
+            }
+        }
+        @media (max-width: 600px) {
+            .sidebar {
+                position: relative;
+                left: 15%;
+            }
+        }
+        @media (max-width: 500px) {
+            .sidebar {
+                position: relative;
+                left: 6%;
+            }
+        }
+        @media (max-width: 450px) {
+            .sidebar {
+                position: relative;
+                left: 5%;
+                max-width: 340px;
+            }
+        }
+        @media (max-width: 400px) {
+            .sidebar {
+                position: relative;
+              margin: 10px;
+                max-width: 300px;
+            }
+        }
+       
+        .sidebar h2 {
+            margin: 0;
+        }
+        .wallet {
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                margin: 10px 0;
+                order: -1;
+            }
+        }
+        .wallet-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        #connectWallet {
+            padding: 8px 12px;
+            background: rgba(132,48,248,255);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+           
+            box-shadow: 0 0 19px #8333fb inset
+        
+        }
+        #connectWallet:hover {
+            background: rgba(132,48,248,255);
+        }
+        #restartButton {
+            display: none;
+            color: #ccc;
+            position: absolute;
+            top: 800px;
+            font-size: 30px;
+          
+        }
+        #usernameInputContainer {
+            display: none;
+            margin-top: 10px;
+        }
+        #usernameInput {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #submitUsername {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #submitUsername:hover {
+            background: darkgreen;
+        }
+        #leaderboard {
+            margin-top: 20px;
+            text-align: left;
+            display: none;
+            color: rgb(0, 0, 0);
+        }
+        #leaderboard h3 {
+            margin: 0;
+        }
+        #leaderboard ol {
+            padding-left: 20px;
+        }
+         #fullscreenButton {
+            position: relative;
+            top: 0px;
+            right: -5px;
+            padding: 8px 12px;
+            background: #250056;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #fullscreenButton:hover {
+            background: #0056b3;
+        }
+        #header{
+            color: #ccc;
+            text-align: center;
+        }
+        
+.face {
+    height: 50px;
+    position: relative;
+    left: 10px;
+    display: inline;
+    animation: entry 1s 1ms ease-in-out ;
+   
+    border-radius: 50px;
+   
+    
+}
+@media(max-width:500px){
+    .face {
+        height: 50px;
+    }
+}
+
+.ccc h2{
+    color:rgb(255, 255, 255);
+    display: inline;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 1000;
+    top: 3PX;
+}
+
+
+
+          
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+ 
+    
+    height: 80px;
+    margin-bottom: 0px;
+   
+    position:relative;
+    top: -25px;
+    left: 0px;
+    z-index: 999;
+    
+}
+@keyframes entry{
+    0%{
+        transform: translateY(-70px) ;
+        
+    }
+    80%{
+        transform: translateY(10px) ;
+    }
+    100%{
+        transform: translateY(0px) ;
+    }
+}
+
+.dlist a {
+    padding: 20px;
+
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 20px;
+}
+.list{
+    color: #562316;
+    transition:color 0.5s ease;
+    position: relative;
+    animation: entry 1s 1ms ease-in-out ;
+}
+.list:hover{
+
+    color: #870000;
+   
+}
+
+.dlist{
+    position: relative;
+    display: flex;
+    animation: entry 1s 1ms ease-in-out ;
+    align-items: center;
+   
+   
+    
+}
+
+.list:active::after , .list:hover::after {
+content: '';
+background-color:rgb(135, 0, 0) ;
+position:absolute ;
+width: 60%;
+    height: 2px;
+    bottom: 10px;
+    left: 20px;
+}
+
+
+
+
+
+
+
+  
+    
+
+
+li {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.Alist {
+    display:flex;
+    align-items:start;    
+ position: relative;
+ 
+    list-style: none;
+}
+
+
+
+#menu-icon{
+    cursor: pointer;
+    color:#ffffff;
+    display: inline;
+    font-size: 20px;
+    margin-left: 20px;
+   
+}
+@media(max-width:100px){
+    #menu-icon{
+        display: none;
+    }
+}
+
+.over-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+        @media (max-width: 450px) {
+    #gameCanvas {
+               
+                width: 380px;
+            }
+        }
+        
+@media (max-width: 400px) {
+    #gameCanvas {
+               
+                width: 340px;
+            }
+        }
+
+.sidebar1{
+  
+    background-color:rgb(0, 0, 0 ,0.96);
+        
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: sideup 1s 0.1ms ease-in-out forwards;
+    overflow: hidden;
+    z-index: 999;
+
+}
+.sidebar1 i{
+    
+    animation: cancel 1s 0.01ms ease-in-out forwards;
+    font-size: 25px;
+   
+}
+
+
+@keyframes cancel{
+    0%{transform: translateY(-500px) ;
+    opacity:0 ;};
+        100%{transform: translateY(0px);
+            opacity:1;
+        }
+}
+@keyframes sideup{
+    0%{transform: translateY(-500px)};
+        100%{transform: translateY(0px)
+        }
+}
+
+.side{
+    display: flex;
+    flex-direction: column;  
+    
+    }
+
+    
+   
+.side a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    position: relative;
+    
+}
+
+
+.sidebar1 ul li{
+    padding: 30px;
+    width: 100%;
+    border: 10px , beige;
+}
+
+
+#cancel{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    left: 10px;
+    
+}
+
+.side a:active::after , .side a:hover::after {
+    content: '';
+    background-color:#ffffff;
+    opacity: 0.8;
+    z-index: -1;
+    position:absolute ;
+    
+      
+        bottom: 10px;
+        left: 0%;
+       
+
+        width: 1000%;
+        height: 50px;
+        bottom: 10px;
+        left: -500%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .berablink{
+ font-size: 30px;
+ font-weight: 800;
+animation: blink 2s 2s infinite alternate;
+    }
+
+   
+
+    
+
+    @media(max-width:1000px){
+.list{
+    display: none}
+    }
+    @media(min-width:1000px){
+        #menu-icon{
+            display: none;
+        }
+    }
+    .lev{
+        color: white;
+        display: none;
+        
+    }
+
+    .color1{
+        color: rgba(132,48,248,255);
+    }
+    .color2{
+        color: #250056;
+    }
+      
+  .rules{
+    color: white;
+    text-align: center;
+  }
+
+  .rules li{
+  
+    list-style-type:circle;
+    list-style-position: inside;
+
+    line-height: 30px;
+  }
+
+  #socialTasks {
+    margin-top: 20px;
+    padding: 10px;
+    background-color:transparent;
+    border-radius: 5px;
+    color: #f3f3f3;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+@media(max-width:500px){
+
+    #socialTasks {
+       
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+}
+
+.taskes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 70px;
+}
+
+#twitterUsername{
+    color: #8333fb;
+    font-size: 27px;
+}
+
+#socialTasks button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    
+    background-color: #7d31e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#socialTasks button:hover {
+    background-color: #5a1d9b;
+}
+
+.tasks{
+    display: flex;
+    justify-content:space-between;
+    width: 80%;
+    border: 1px solid rgb(81, 81, 81);
+    padding: 10px;
+    border-radius:20px ;
+   background-color: white;
+   color: #474747;
+   font-weight: 1000;
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.37);
+    margin-top: 20px ;
+}
+.tasks button{
+    height: 40px;
+    width: 80px;
+    display: flex;
+    color: white;
+    background-color: transparent;
+    background: #8333fb;
+       z-index: 1000;
+
+}
+.task-instruction{
+   position: relative;
+   top: -10px;
+}
+
+
+
+
+.check1 {
+    color: #7d31e3;
+    font-size: 20px;
+    margin-left: 10px;
+    display: none; /* Hidden by default */
+}
+
+
+/* Add this to your style.css */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #5a1d9b;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+}
+
+.button-task0.loading .loader,
+.button-task1.loading .loader,
+.button-task2.loading .loader,
+.button-task3.loading .loader {
+    display: inline-block; /* Show loader when loading */
+}
+
+.button-task0.completed,
+.button-task1.completed,
+.button-task2.completed,
+.button-task3.completed {
+    background-color: #4CAF50; /* Green background for completed tasks */
+    cursor: not-allowed;
+}
+.ilp{
+    display: none;
+    
+}
+#twitterUsernameInput{
+    padding: 10px;
+    border-radius: 0px;
+    margin-right: 7px;
+    width: 300px;
+    background-color: transparent;
+    border: none;
+   
+    border-bottom: #ccc solid 2px;
+    background:  rgb(255, 255, 255);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.37);
+    color: #000000;
+}
+
+.ik{
+    text-align: center;
+}
+#twitterUsernameInputContainer{
+
+    margin-left: 0px;
+    display: flex;
+}
+#submitTwitterUsername{
+    padding: 0px;
+}
+.kl{
+color: #8333fb;
+font-size: 30px;
+}
+
+#socialFiButton{
+   
+  
+    border-radius: 8px;
+    border: 2px solid #8333fb;
+    background-color: transparent;
+    margin-left: 50px;
+    padding: 10px;
+    font-family: inherit;
+    width: 170px;
+    font-size:20px;
+    font-weight: 1000;
+    color: #ffffff;
+   cursor: pointer;
+   margin-top: 20px;
+   position: relative;
+   left: 40%;
+   box-shadow: 0 0 8px #8333fb;
+
+}
+
+@media(max-width:500px){
+
+    #socialFiButton {
+       
+        position: relative;
+   left: 20%;
+
+       
+    }
+}
+@media(max-width:400px){
+
+    #socialFiButton {
+       
+        position: relative;
+   left: 15%;
+
+       
+    }
+}
+#socialFiButton:hover{
+    height: 50px;
+    color: white;
+    font-size:20px;
+    font-weight: 1000;
+    background-color: #8333fb;
+   cursor: pointer;
+   margin-top: 20px;
+
+}
+
+#drop-down{
+margin-left: 6px;
+color: #8333fb;
+
+
+}
+.drop-down{
+    margin-left: 6px;
+    color: #7d31e3;
+    }
+    #drop-down1{
+        margin-left: 6px;
+        color: #ffffff;
+        }
+
+#openGameButton{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 23px;
+    font-weight: 20px;
+}
+
+.upward{
+    margin-left: 15px;
+}
+
+
+
+#leaderboardPopup {
+    width: 280px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#leaderboardPopup ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leaderboardPopup li {
+    margin: 10px 0;
+}
+
+#leaderboardPopup button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#leaderboardPopup button:hover {
+    background-color: #45a049;
+}

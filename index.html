@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGNAD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Permanent+Marker&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Bubbles&family=Rubik+Wet+Paint&family=Shojumaru&family=Special+Elite&family=Trade+Winds&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href='./style.css'>
+    <link rel="icon" href="/fly/logo.jpg" type="image/x-icon" class="icon" />
+
+    <script src="https://kit.fontawesome.com/e0b47b5a6c.js" crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/8fcbaedcdc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <section class="menu">
+        <div class="ccc"><img src="./logo.jpg"  class="face">
+        
+        </div>
+
+        
+
+        <div>
+            <ul class="Alist">
+                <li class="dlist">
+                   
+                    <button id="fullscreenButton">Fullscreen</button>
+                    <i   id="menu-icon" class="fas fa-outdent" aria-hidden="true"></i>
+            </li>
+            </ul>
+        </div>
+        
+    </section >
+    
+        <nav  class="sidebar1">
+           
+            <i  class="fa-solid fa-xmark" id="cancel" aria-hidden="true"></i>
+            <ul >
+                <li class="side" >
+                    
+                    <a   class="list" id="abtbtn"  >Home</a>
+                   
+                    <a   class="list partner">Play BUGNADS</a>
+                   
+                    
+                </li>
+            </ul>    
+        </nav>
+
+        <div class="over-all">
+
+    <h1 id="header">CONNECT WALLET TO PLAY</h1>
+    
+     <div class="oppx-1">
+    <div class="oppx">
+       
+        <div class="sidebar">
+            <h2 class="color2">BUGNAD</h2>
+            
+            <p class="op"><span class="color2">BUGNAME:</span> <span id="username">Buglad</span></p>
+            <p class="op"><span class="color2">BUGNAD Points:</span> <span id="liveScore">0</span></p>
+            <p class="op"><span class="color2">Social Points:</span> <span id="socialScore">0</span></p> 
+           
+
+            <div class="wallet">
+                <button id="connectWallet">Connect Wallet</button>
+                <div id="walletInfo" class="wallet-info"></div>
+                <div id="usernameInputContainer">
+                    <input type="text" id="usernameInput" placeholder="Enter username">
+                    <button id="submitUsername">Submit</button>
+                    <p id="usernameError" style="color: red; display: none;">Bugname not available!</p>
+                </div>
+                <button id="changeUsernameButton" style="display: none;" title="You can only change your username once">Change Username</button>
+                <div id="changeUsernameContainer" style="display: none;">
+                    <input type="text" id="newUsernameInput" placeholder="Enter new username">
+                    <button id="submitNewUsername">Submit</button>
+                    <p id="newUsernameError" style="color: red; display: none;">Username already exists!</p>
+                </div>
+                <div id="leaderboard">
+                    <h3 class="title">Leaderboard</h3>
+                    <hr>
+                    <ol id="leaderboardList"></ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div>
+        <p class="lev" style="color: rgb(0, 0, 0); display: none;"><span id="currentLevel"></span></p> <!-- Level display -->
+        <div class="canvas-container">
+<button id="minimizeButton" class="minimize-button" style="display: none;">Minimize<i class="fa-solid fa-chevron-up upward "></i></button>
+            <canvas id="gameCanvas" width="450" height="650"></canvas>
+        </div>
+        <button id="openGameButton" class="open-game-button" style="display: none;">Open Game<i id="drop-down" class="fa-solid fa-circle-chevron-down drop-down"></i></button>  
+        <p id="restartButton" style="display: none;">Tap to Play</p>   
+   </div>
+</div>
+<div class="rules">
+    <h1>
+        How of PLay
+    </h1>
+
+    <ul >
+        
+         
+<li>Tap or press Spacebar to flap and keep the Bug flying.</li>
+<li>Navigate through gaps in the pipes to earn points.</li>
+<li>Earn 1 point for each pair of pipes you pass.</li>
+<li>Level up every  points—pipes move faster!</li>
+<li>Avoid hitting pipes or falling off the screen.</li>
+<li>Connect your wallet, climb the leaderboard, and qualify for Bugnad rewards!</li>
+
+
+
+
+     
+    </ul>
+</div>
+
+</div>
+<button id="socialFiButton" style="display: none;">Social Tasks<i id="drop-down1" class="fa-solid fa-circle-chevron-down drop-down"></i></button></button>
+
+
+         
+<div id="socialTasks" style="display: none;" class="boundary">
+    <h2 class="kl ik Submit-Wallet-heading">Submit Wallet</h2>
+    <p class="tasks-p ik">Complete Tasks to Submit Wallet</p>
+    <p class="tasks-p ik">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex voluptatem pariatur err. ipsum dolor sit amet consectetur adipisicing elit. Nobis ex voluptatem pariatur err</p>
+
+    <!-- Add "Enter Username" dropdown button -->
+    <button id="toggleTwitterUsernameButton">Enter Username<i id="drop-down1" class="fa-solid fa-circle-chevron-down drop-down"></i></button>
+
+    <!-- Twitter Username Input Container -->
+    <div id="twitterUsernameInputContainer" class="ilp" style="display: none;">
+        <input type="text" id="twitterUsernameInput" placeholder="Enter Your Twitter Username">
+        <button id="submitTwitterUsername">Submit</button>
+    </div>
+
+    <!-- Display Twitter Username -->
+    <p id="twitterUsernameDisplay" style="display: none;">Twitter Username: <span id="twitterUsername"></span></p>
+
+    <section class="taskes">
+
+        
+
+        
+        <div class="tasks">
+            <p>Follow us on X (50points)</p>
+            <div>
+                <button id="button-task1" class="button-task0 socialTasks-button">
+                    <div class="loader" ></div>
+                    <p class="task-instruction task-instruction1">Follow<i class="fa-solid fa-check check1" id="check1" style="display: none;"></i></p>
+                   
+                </button>
+              
+            </div>
+            
+        </div>
+        
+        <div class="tasks task-final">
+            <p>Follow our Partners (50points)</p>
+            <button id="button-task2" class="button-task1">
+                <div class="loader"></div>
+                <p class="task-instruction task-instruction2">Follow <i class="fa-solid fa-check check1" id="check2" style="display: none;"></i></p>
+               
+            </button>
+           
+        </div>
+        
+        <div class="tasks task-final">
+            <p>Like / Rt this Tweet (50points)</p>
+            <button id="button-task3" class="button-task2">
+                <div class="loader"></div>
+                <p class="task-instruction task-instruction3">Like/RT<i class="fa-solid fa-check check1" id="check3" style="display: none;"></i></p>
+                
+            </button>
+            
+        </div>
+        <div  class=" tasks">
+           
+            <p class="input" id="wallet-id"  >Follow Monad(50points)</p>
+            <button id="button-task4" class="submit">
+                <div class="loader"></div>
+                <p class="task-instruction task-instruction1">Follow<i class="fa-solid fa-check check1" id="check4" style="display: none;"></i></p>
+            </button>
+            
+        </div>
+        
+        
+    </section>
+
+</div>
+
+
+
+
+
+
+
+
+    <script type="module">
+
+
+
+document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+const sidebar1 = document.querySelector('.sidebar1')
+const menubarremove = document.getElementById('menu-icon')
+const cancel = document.getElementById('cancel')
+
+
+    
+menubarremove.addEventListener('click' , ()=>{
+    sidebar1.style.display = 'flex'
+    
+    menubarremove.style.display ='none'
+})
+
+cancel.addEventListener('click' , ()=>{
+    sidebar1.style.display = 'none'
+  menubarremove.style.display ='inline'
+})
+
+
+let socialPoints = 0;
+const socialFiButton = document.getElementById('socialFiButton');
+const socialTasks = document.getElementById('socialTasks');
+const socialScoreDisplay = document.getElementById('socialScore');
+let isSocialFiVisible = false; // Track visibility of SocialFi tasks
+
+// Function to toggle between game and social tasks
+socialFiButton.addEventListener('click', () => {
+    if (!account) {
+        // If wallet is not connected:
+        // Scroll to the sidebar
+        document.querySelector('.sidebar').scrollIntoView({ behavior: 'smooth' });
+
+        // Toggle button text to "SocialFi"
+        socialFiButton.textContent = 'SocialFi';
+        isSocialFiVisible = false; // Reset SocialFi visibility state
+        return; // Exit the function
+    }
+
+    // If wallet is connected, proceed with toggling
+    if (isSocialFiVisible) {
+        // Hide SocialFi tasks and show the game
+        socialTasks.style.display = 'none';
+        gameCanvas.style.display = 'block';
+        restartButton.style.display = 'block';
+        socialFiButton.innerHTML =  `<li>SocialFi <i id="drop-down" class="fa-solid fa-circle-chevron-down drop-down"></i></li>`; // Change button text to "SocialFi"
+    } else {
+        // Show SocialFi tasks and hide the game
+        socialTasks.style.display = 'block';
+        gameCanvas.style.display = 'none';
+        restartButton.style.display = 'none';
+        socialFiButton.textContent = 'Play BUGNAD'; // Change button text to "Play BUGNAD"
+
+        // Show Twitter username input field
+        document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+    }
+
+    // Toggle the state
+    isSocialFiVisible = !isSocialFiVisible;
+});
+
+// Hide game canvas by default if wallet is not connected
+
+
+// Initialize button text based on the initial state
+socialFiButton.innerHTML = isSocialFiVisible ? `<li>Play BUGNAD <i id="drop-down" class="fa-solid fa-circle-chevron-down drop-down"></i></li>` : `<li>SocialFi <i id="drop-down" class="fa-solid fa-circle-chevron-down drop-down"></i></li>`;
+
+// Function to add social points
+function addSocialPoints(points) {
+    socialPoints += points;
+    socialScoreDisplay.textContent = socialPoints;
+    if (account) {
+        saveWalletData(account, usernameDisplay.textContent, totalScore, socialPoints);
+    }
+}
+document.getElementById('submitTwitterUsername').addEventListener('click', () => {
+    const twitterUsername = document.getElementById('twitterUsernameInput').value.trim();
+    if (twitterUsername) {
+        // Save Twitter username in Firebase
+        if (account) {
+            saveWalletData(account, usernameDisplay.textContent, totalScore, socialPoints, [...completedTasks], twitterUsername);
+        }
+
+        // Display Twitter username permanently
+        document.getElementById('twitterUsername').textContent = twitterUsername;
+        document.getElementById('twitterUsernameDisplay').style.display = 'block';
+
+        // Hide input field and submit button
+        document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+
+        // Enable task buttons
+        enableTaskButtons();
+    } else {
+        alert("Please enter a valid Twitter username!");
+    }
+});
+
+
+
+
+
+
+
+
+
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getDatabase, ref, set, get, query, orderByChild, limitToLast } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDtTMjDE4YZfzpqZ10Q3-8-kxnfFyYY1JQ",
+            authDomain: "ethform-4c2f6.firebaseapp.com",
+            databaseURL: "https://ethform-4c2f6-default-rtdb.firebaseio.com",
+            projectId: "ethform-4c2f6",
+            storageBucket: "ethform-4c2f6.appspot.com",
+            messagingSenderId: "169395239497",
+            appId: "1:169395239497:web:e441fb66f484d838751d98"
+        };
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+       // Wallet Connection Logic
+       let account = null;
+        let isFirstConnection = true;
+        const connectWalletBtn = document.getElementById("connectWallet");
+        const walletInfoDiv = document.getElementById("walletInfo");
+        const gameCanvas = document.getElementById("gameCanvas");
+        const restartButton = document.getElementById("restartButton");
+        const usernameInputContainer = document.getElementById("usernameInputContainer");
+        const usernameInput = document.getElementById("usernameInput");
+        const submitUsernameBtn = document.getElementById("submitUsername");
+        const usernameDisplay = document.getElementById("username");
+        const leaderboardList = document.getElementById("leaderboardList");
+        const leaderboard = document.getElementById("leaderboard");
+        const usernameError = document.getElementById("usernameError");
+        const header = document.getElementById("header");
+
+        const rule = document.getElementById("rule");
+
+        const lev = document.querySelector('.lev')
+        const rules = document.querySelector('.rules')
+        
+
+        const minimizeButton = document.getElementById('minimizeButton');
+const openGameButton = document.getElementById('openGameButton');
+
+// Function to minimize the canvas
+minimizeButton.addEventListener('click', () => {
+    gameCanvas.style.display = 'none';
+    minimizeButton.style.display = 'none';
+    openGameButton.style.display = 'block';
+    restartButton.style.display = 'none';
+
+});
+
+// Function to open the canvas
+openGameButton.addEventListener('click', () => {
+    gameCanvas.style.display = 'block';
+    minimizeButton.style.display = 'block';
+    openGameButton.style.display = 'none';
+    restartButton.style.display = 'block';
+
+});
+
+        // Game State
+        let totalScore = 0;
+       
+
+        const nameList = [
+    "Bug", "Fly", "Wing", "Buzz", "Flap", "Glide", "Soar", "Dash", "Zoom", "Flit",
+    "Swift", "Aero", "Sky", "Cloud", "Wind", "Gust", "Breeze", "Feather", "Tail", "Beak"
+];
+
+function generateRandomUsername() {
+    const name1 = nameList[Math.floor(Math.random() * nameList.length)];
+    const name2 = nameList[Math.floor(Math.random() * nameList.length)];
+    return `${name1}${name2}`;
+}
+
+async function generateUniqueUsername() {
+    let isUnique = false;
+    let newUsername = '';
+
+    while (!isUnique) {
+        newUsername = generateRandomUsername(); // Generate a random username
+        isUnique = await isUsernameAvailable(newUsername); // Check if it's available
+    }
+
+    return newUsername;
+}
+
+
+
+
+        // Background Image
+        const backgroundImage = new Image();
+        backgroundImage.src = "./bg1.jpg"; // Replace with your background image path
+        let backgroundOffset = 0; // Tracks the background's horizontal position
+
+
+        let completedTasks = new Set(); // Track completed tasks
+
+// Function to mark a task as completed
+// Function to mark a task as completed
+function completeTask(taskId) {
+    const button = document.getElementById(`button-task${taskId}`);
+    const checkmark = document.getElementById(`check${taskId}`);
+    const loader = button.querySelector('.loader');
+    const taskInstruction = button.querySelector('.task-instruction');
+
+    if (!button || !checkmark || !loader || !taskInstruction) {
+        console.error(`Element not found for task ${taskId}`);
+        return;
+    }
+
+    // Disable the button and show loading animation
+    button.disabled = true;
+    button.classList.add('loading');
+    loader.style.display = 'inline-block';
+    taskInstruction.textContent = '';
+
+    // Simulate a 10-second loading period
+    setTimeout(() => {
+        // Hide loader and update button text
+        loader.style.display = 'none';
+        taskInstruction.textContent = 'Completed';
+        button.classList.remove('loading');
+        button.classList.add('completed');
+
+        // Mark task as completed
+        completedTasks.add(taskId);
+        checkmark.style.display = 'inline';
+
+        // Save updated data to Firebase
+        if (account) {
+            saveWalletData(account, usernameDisplay.textContent, totalScore, socialPoints, [...completedTasks]);
+        }
+    }, 10000); // 10 seconds
+}
+
+// Event listeners for social tasks
+// Event listeners for social tasks
+document.getElementById('button-task1').addEventListener('click', () => {
+    addSocialPoints(50);
+    completeTask(1); // Mark task 1 as completed
+});
+
+document.getElementById('button-task2').addEventListener('click', () => {
+    addSocialPoints(50);
+    completeTask(2); // Mark task 2 as completed
+});
+
+document.getElementById('button-task3').addEventListener('click', () => {
+    addSocialPoints(50);
+    completeTask(3); // Mark task 3 as completed
+});
+
+document.getElementById('button-task4').addEventListener('click', () => {
+    addSocialPoints(50);
+    completeTask(4); // Mark task 4 as completed
+});
+
+function disableTaskButtons() {
+    document.querySelectorAll('.button-task0, .button-task1, .button-task2, .button-task3').forEach(button => {
+        button.disabled = true; // Disable all task buttons
+    });
+}
+
+// Toggle Twitter Username Input Field
+document.getElementById('toggleTwitterUsernameButton').addEventListener('click', () => {
+    const twitterUsernameInputContainer = document.getElementById('twitterUsernameInputContainer');
+    if (twitterUsernameInputContainer.style.display === 'none' || twitterUsernameInputContainer.style.display === '') {
+        twitterUsernameInputContainer.style.display = 'flex'; // Show the input field
+    } else {
+        twitterUsernameInputContainer.style.display = 'none'; // Hide the input field
+    }
+});
+
+
+async function loadWalletData(walletAddress) {
+    if (!walletAddress) return; // Do nothing if wallet is disconnected
+
+    const dbRef = ref(database, `wallets/${walletAddress}`);
+    try {
+        const snapshot = await get(dbRef);
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            usernameDisplay.textContent = data.username || "BUGLAD";
+            totalScore = data.score || 0;
+            socialPoints = data.socialPoints || 0;
+            completedTasks = new Set(data.completedTasks || []); // Load completed tasks
+            usernameChanged = data.usernameChanged || false; // Load usernameChanged flag
+            isFirstConnection = data.isFirstConnection !== undefined ? data.isFirstConnection : true; // Load isFirstConnection flag
+
+            // Load Twitter username
+            if (data.twitterUsername) {
+                document.getElementById('twitterUsername').textContent = data.twitterUsername;
+                document.getElementById('twitterUsernameDisplay').style.display = 'block';
+                document.getElementById('twitterUsernameInputContainer').style.display = 'none'; // Hide input field
+            } else {
+                // Hide input field by default
+                document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+            }
+
+            // Update UI for completed tasks
+            completedTasks.forEach(taskId => {
+                const button = document.getElementById(`button-task${taskId}`);
+                const checkmark = document.getElementById(`check${taskId}`);
+                const taskInstruction = button?.querySelector('.task-instruction');
+
+                if (button && checkmark && taskInstruction) {
+                    button.disabled = true;
+                    button.classList.add('completed');
+                    taskInstruction.textContent = 'Completed';
+                    checkmark.style.display = 'inline';
+                }
+            });
+
+            document.getElementById('liveScore').textContent = totalScore;
+            socialScoreDisplay.textContent = socialPoints;
+
+            if (data.usernameSet) {
+                usernameInputContainer.style.display = "none";
+            }
+
+            // Show "Change Username" button if username has not been changed
+            if (!usernameChanged) {
+                document.getElementById('changeUsernameButton').style.display = 'block';
+            } else {
+                document.getElementById('changeUsernameButton').textContent = "Change Username (Used)";
+            }
+
+            // Enable task buttons if Twitter username is set
+            updateTaskButtons();
+        } else {
+            usernameDisplay.textContent = "Buglads";
+            totalScore = 0;
+            socialPoints = 0;
+            document.getElementById('liveScore').textContent = totalScore;
+            socialScoreDisplay.textContent = socialPoints;
+        }
+    } catch (error) {
+        console.error("Error loading wallet data:", error);
+    }
+}
+
+if (!account) {
+    disableTaskButtons();
+}
+
+// Hide Twitter username input by default
+if (!account) {
+    document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+    document.getElementById('twitterUsernameDisplay').style.display = 'none';
+}
+
+        async function isUsernameAvailable(username) {
+            const dbRef = ref(database, 'wallets');
+            try {
+                const snapshot = await get(dbRef);
+                if (snapshot.exists()) {
+                    let isAvailable = true;
+                    snapshot.forEach(childSnapshot => {
+                        const data = childSnapshot.val();
+                        if (data.username === username) {
+                            isAvailable = false;
+                        }
+                    });
+                    return isAvailable;
+                }
+                return true; // No usernames exist yet
+            } catch (error) {
+                console.error("Error checking username availability:", error);
+                return false;
+            }
+        }
+
+     async function saveWalletData(walletAddress, username, score, socialPoints = 0, completedTasks = [], twitterUsername = '') {
+    const dbRef = ref(database, `wallets/${walletAddress}`);
+    try {
+        await set(dbRef, {
+            username: username,
+            score: score,
+            socialPoints: socialPoints,
+            completedTasks: completedTasks,
+            twitterUsername: twitterUsername, // Save Twitter username
+            usernameSet: true,
+            usernameChanged: usernameChanged,
+            isFirstConnection: isFirstConnection
+        });
+        updateLeaderboard();
+    } catch (error) {
+        console.error("Error saving wallet data:", error);
+    }
+}
+
+async function fetchFullLeaderboard() {
+    const dbRef = ref(database, 'wallets');
+    const leaderboardQuery = query(dbRef, orderByChild('score'));
+    try {
+        const snapshot = await get(leaderboardQuery);
+        if (snapshot.exists()) {
+            const leaderboardData = [];
+            snapshot.forEach(childSnapshot => {
+                const data = childSnapshot.val();
+                leaderboardData.push({ username: data.username, score: data.score });
+            });
+            leaderboardData.sort((a, b) => b.score - a.score); // Sort by score in descending order
+
+            // Display full leaderboard in popup
+            displayLeaderboardPopup(leaderboardData);
+        } else {
+            alert("No scores found!");
+        }
+    } catch (error) {
+        console.error("Error fetching full leaderboard data:", error);
+    }
+}
+
+function displayLeaderboardPopup(leaderboardData) {
+    // Create popup container
+    const popup = document.createElement('div');
+    popup.id = 'leaderboardPopup';
+    popup.style.position = 'fixed';
+    popup.style.top = '50%';
+    popup.style.left = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.backgroundColor = '#fff';
+    popup.style.padding = '20px';
+    popup.style.borderRadius = '10px';
+    popup.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+    popup.style.zIndex = '1000';
+
+    // Add close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.style.marginTop = '10px';
+    closeButton.addEventListener('click', () => {
+        document.body.removeChild(popup);
+    });
+
+    // Add leaderboard content
+    const popupContent = document.createElement('div');
+    popupContent.innerHTML = `
+        <h3>Full Leaderboard</h3>
+        <ol>
+            ${leaderboardData.map((entry, index) => `<li>${index + 1}. ${entry.username} - ${entry.score}</li>`).join('')}
+        </ol>
+    `;
+    popupContent.appendChild(closeButton);
+    popup.appendChild(popupContent);
+
+    // Add popup to the page
+    document.body.appendChild(popup);
+}
+
+document.addEventListener('click', (event) => {
+    if (event.target.id === 'seeMoreLink') {
+        event.preventDefault(); // Prevent default link behavior
+        fetchFullLeaderboard(); // Fetch and display full leaderboard
+    }
+});
+    
+
+
+async function updateLeaderboard() {
+    const dbRef = ref(database, 'wallets');
+    const leaderboardQuery = query(dbRef, orderByChild('score'), limitToLast(5)); // Fetch top 5 players
+    try {
+        const snapshot = await get(leaderboardQuery);
+        if (snapshot.exists()) {
+            const leaderboardData = [];
+            snapshot.forEach(childSnapshot => {
+                const data = childSnapshot.val();
+                leaderboardData.push({ username: data.username, score: data.score });
+            });
+            leaderboardData.sort((a, b) => b.score - a.score); // Sort by score in descending order
+
+            // Display top 5 players
+            leaderboardList.innerHTML = leaderboardData.map((entry, index) =>
+                `<li>${index + 1}. ${entry.username} - ${entry.score}</li>`
+            ).join('');
+
+            // Add "See More" link
+            leaderboardList.innerHTML += `<li><a href="#" id="seeMoreLink">See More</a></li>`;
+        } else {
+            leaderboardList.innerHTML = '<li>No scores yet!</li>';
+        }
+    } catch (error) {
+        console.error("Error fetching leaderboard data:", error);
+    }
+}
+     
+
+        let usernameChanged = false; // Track if username has been changed
+
+// Function to show the change username input
+document.getElementById('changeUsernameButton').addEventListener('click', () => {
+    if (usernameChanged) {
+        alert("You can only change your username once!");
+        return;
+    }
+
+    const changeUsernameContainer = document.getElementById('changeUsernameContainer');
+    if (changeUsernameContainer.style.display === 'none' || changeUsernameContainer.style.display === '') {
+        changeUsernameContainer.style.display = 'block'; // Show the input field
+    } else {
+        changeUsernameContainer.style.display = 'none'; // Hide the input field
+    }
+});
+
+// Function to handle new username submission
+document.getElementById('submitNewUsername').addEventListener('click', async () => {
+    const newUsername = document.getElementById('newUsernameInput').value.trim();
+    if (newUsername) {
+        const isAvailable = await isUsernameAvailable(newUsername);
+        if (isAvailable) {
+            usernameDisplay.textContent = newUsername;
+            document.getElementById('changeUsernameContainer').style.display = 'none'; // Hide after submission
+            document.getElementById('newUsernameError').style.display = 'none';
+
+            usernameChanged = true; // Mark username as changed
+            document.getElementById('changeUsernameButton').textContent = "Change Username (Used)"; // Update button text
+
+            if (account) {
+                await saveWalletData(account, newUsername, totalScore, socialPoints);
+            }
+        } else {
+            document.getElementById('newUsernameError').textContent = "Username already exists!";
+            document.getElementById('newUsernameError').style.display = 'block'; // Show error message
+        }
+    } else {
+        alert("Please enter a valid username!");
+    }
+});
+
+// Modify the connectWallet function to generate a random username on first connection
+async function connectWallet() {
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+            const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+            account = accounts[0];
+            const web3 = new Web3(window.ethereum);
+            const balanceWei = await web3.eth.getBalance(account);
+            const balanceEth = web3.utils.fromWei(balanceWei, "ether");
+            walletInfoDiv.innerHTML = `Wallet: ${account.slice(0, 6)}...${account.slice(-4)}<br>Balance: ${balanceEth} ETH`;
+            connectWalletBtn.textContent = "Disconnect";
+
+            // Show game-related elements
+            leaderboard.style.display = 'block';
+            rules.style.display = 'none';
+            lev.style.display = 'block';
+            header.style.display = 'none';
+            gameCanvas.style.display = 'block';
+            restartButton.style.display = 'none'; // Hide "Tap to Play" button initially
+
+            // Show SocialFi button and Social Tasks
+            socialFiButton.style.display = 'block';
+            socialTasks.style.display = 'none'; // Hide Social Tasks by default
+
+            // Show Twitter username input field
+            document.getElementById('twitterUsernameInputContainer').style.display = 'flex';
+
+            // Show the minimize button
+            document.getElementById('minimizeButton').style.display = 'block'; // Show minimize button
+
+            // Enable task buttons
+            enableTaskButtons();
+
+            // Load wallet data
+            await loadWalletData(account);
+
+            // Generate a unique username only on first connection
+            if (isFirstConnection) {
+                const randomUsername = await generateUniqueUsername(); // Generate a unique username
+                usernameDisplay.textContent = randomUsername;
+                usernameInputContainer.style.display = "none";
+                document.getElementById('changeUsernameButton').style.display = 'block';
+                isFirstConnection = false; // Mark as not first connection
+
+                if (account) {
+                    await saveWalletData(account, randomUsername, totalScore);
+                }
+            }
+
+            startGame();
+            updateLeaderboard();
+        } catch (error) {
+            console.error("Wallet connection failed", error);
+            alert("Failed to connect wallet. Please try again.");
+        }
+    } else {
+        alert("Please install MetaMask!");
+        window.open("https://metamask.io/", "_blank");
+    }
+}
+function disconnectWallet() {
+    // Clear wallet connection
+    account = null;
+    walletInfoDiv.innerHTML = "";
+    connectWalletBtn.textContent = "Connect Wallet";
+
+    // Reset Bugname and points
+    usernameDisplay.textContent = "Buglad"; // Default username
+    totalScore = 0; // Reset total score
+    socialPoints = 0; // Reset social points
+    document.getElementById('liveScore').textContent = totalScore; // Update live score display
+    socialScoreDisplay.textContent = socialPoints; // Update social score display
+
+    // Reset completed tasks
+    completedTasks.clear(); // Clear the set of completed tasks
+    document.querySelectorAll('.check1').forEach(checkmark => {
+        checkmark.style.display = 'none'; // Hide all checkmarks
+    });
+    document.querySelectorAll('.button-task0, .button-task1, .button-task2, .button-task3').forEach(button => {
+        button.disabled = true; // Disable all task buttons
+        button.classList.remove('completed'); // Remove completed class
+        button.querySelector('.task-instruction').textContent = button.id === 'button-task1' ? 'Follow' :
+                                                              button.id === 'button-task2' ? 'Follow' :
+                                                              button.id === 'button-task3' ? 'Like/RT' :
+                                                              'Submit'; // Reset button text
+    });
+
+    // Hide game-related elements
+    gameCanvas.style.display = 'none';
+    restartButton.style.display = 'none';
+    leaderboard.style.display = 'none';
+    usernameInputContainer.style.display = 'none';
+
+    // Hide SocialFi button and Social Tasks
+    socialFiButton.style.display = 'none';
+    socialTasks.style.display = 'none';
+
+    // Hide the minimize button
+    document.getElementById('minimizeButton').style.display = 'none'; // Hide minimize button
+
+    // Hide Twitter username input field
+    document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+
+    // Show default elements
+    header.style.display = 'block';
+    rules.style.display = 'block';
+    lev.style.display = 'none';
+
+    // Reset SocialFi button text
+    socialFiButton.textContent = 'SocialFi';
+    isSocialFiVisible = false; // Reset SocialFi visibility state
+}
+
+        connectWalletBtn.addEventListener("click", () => {
+            if (account) {
+                disconnectWallet();
+            } else {
+                connectWallet();
+            }
+        });
+
+        submitUsernameBtn.addEventListener("click", async () => {
+            const username = usernameInput.value.trim();
+            if (username) {
+                const isAvailable = await isUsernameAvailable(username);
+                if (isAvailable) {
+                    usernameDisplay.textContent = username;
+                    usernameInputContainer.style.display = "none";
+                    usernameError.style.display = "none";
+
+                    if (account) {
+                        await saveWalletData(account, username, totalScore);
+                    }
+                } else {
+                    usernameError.style.display = "block"; // Show error message
+                }
+            } else {
+                alert("Please enter a valid username!");
+            }
+        });
+
+        function enableTaskButtons() {
+    document.querySelectorAll('.button-task0, .button-task1, .button-task2, .button-task3').forEach(button => {
+        if (!completedTasks.has(button.id.replace('button-task', ''))) {
+            button.disabled = false; // Enable only incomplete task buttons
+        }
+    });
+}
+document.querySelectorAll('.button-task0, .button-task1, .button-task2, .button-task3').forEach(button => {
+    button.addEventListener('click', () => {
+        if (!account) {
+            alert('Connect wallet to complete task'); // Show message if wallet is not connected
+            return;
+        }
+
+        // Check if Twitter username is set
+        if (!isTwitterUsernameSet()) {
+            alert('Please enter your Twitter username to complete tasks.'); // Show message if Twitter username is not set
+            return;
+        }
+
+        // Proceed with task completion logic if wallet is connected and Twitter username is set
+        const taskId = button.id.replace('button-task', ''); // Extract task ID from button ID
+        completeTask(taskId);
+    });
+});
+// Disable task buttons on page load if wallet is not connected
+if (!account) {
+    disableTaskButtons();
+}
+
+// Hide Twitter username input by default
+if (!account) {
+    document.getElementById('twitterUsernameInputContainer').style.display = 'none';
+    document.getElementById('twitterUsernameDisplay').style.display = 'none';
+}
+
+
+        class Bird {
+            constructor(x, y, radius, imgSrc, gravity) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.gravity = gravity;
+                this.velocity = 0;
+                this.jumpStrength = -8;
+
+                this.image = new Image();
+                this.image.src = imgSrc;
+                this.image.onload = () => {
+                    console.log("Image loaded successfully");
+                };
+                this.image.onerror = () => {
+                    console.error("Failed to load image:", imgSrc);
+                };
+            }
+
+            flap() {
+                this.velocity = this.jumpStrength;
+            }
+
+            draw(ctx) {
+                if (this.image.complete && this.image.naturalWidth > 0) {
+                    ctx.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2);
+                } else {
+                    console.log("Image not loaded yet");
+                }
+            }
+
+            update() {
+                this.velocity += this.gravity;
+                this.y += this.velocity;
+            }
+
+            isColliding(pipe) {
+                const birdLeft = this.x - this.radius;
+                const birdRight = this.x + this.radius;
+                const birdTop = this.y - this.radius;
+                const birdBottom = this.y + this.radius;
+
+                const pipeLeft = pipe.x;
+                const pipeRight = pipe.x + pipe.width;
+                const pipeTop = pipe.y;
+                const pipeBottom = pipe.y + pipe.height;
+
+                const overlapMargin = 9;
+
+                  if (
+            birdRight > pipeLeft + overlapMargin && // Bird's right edge overlaps pipe's left edge
+            birdLeft < pipeRight - overlapMargin && // Bird's left edge overlaps pipe's right edge
+            birdBottom > pipeTop + overlapMargin && // Bird's bottom edge overlaps pipe's top edge
+            birdTop < pipeBottom - overlapMargin    // Bird's top edge overlaps pipe's bottom edge
+        )  {
+                    return true;
+                }
+
+                return false;
+            }
+
+            isOutOfBounds(canvasHeight) {
+                return this.y + this.radius > canvasHeight || this.y - this.radius < 0;
+            }
+        }
+
+      
+
+       
+
+// Function to update the level display in the sidebar
+function updateLevelDisplay() {
+    console.log("Updating level display to:", level)
+    document.getElementById('currentLevel').textContent = level;
+}
+
+
+let level = 1;
+
+function drawLevel() {
+    console.log("Drawing level:", level);
+ctx.fillStyle = 'white'; // Use a contrasting color for visibility
+ctx.font = '20px Arial'; // Set font size and family
+ctx.fillText(`Level: ${level}`, 20, 30); // Draw text at (10, 30)
+}
+
+// Function to increase the level
+function increaseLevel() {
+    level++; // Increment the level
+    console.log("Level increased to:", level); // Debugging
+    drawLevel(); // Update the level display
+}
+
+let gameStarted = false; // Track if the game has started
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground(); // Draw the moving background
+    drawLevel(); // Draw the current level
+
+    if (gameover || !gameStarted) {
+        ctx.fillStyle = 'white'; // Text color
+        ctx.font = '30px Arial'; // Font size and family
+        ctx.textAlign = 'center'; // Center the text horizontally
+        ctx.fillText('Tap to Play', canvas.width / 2, canvas.height / 2); // Draw text at the center of the canvas
+    }
+
+    bird.draw(ctx);
+    bird.update();
+
+    if (frames % pipeSpawnInterval === 0 && !gameover) {
+        const minHeight = 50;
+        const maxHeight = 180;
+        const gap = 180;
+        const height = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+
+        if (pipes.length === 0 || (canvas.width - pipes[pipes.length - 1].x) >= Math.abs(pipeSpeed) * pipeSpawnInterval) {
+            pipes.push(new Pipe(canvas.width, 0, 50, height, '#7d31e3', pipeSpeed));
+            pipes.push(new Pipe(canvas.width, height + gap, 50, canvas.height - height - gap, '#7d31e3', pipeSpeed));
+        }
+    }
+
+    pipes.forEach(pipe => {
+        pipe.draw(ctx);
+        pipe.move();
+        if (bird.isColliding(pipe)) gameover = true;
+        if (pipe.isOffscreen()) {
+            pipes.splice(pipes.indexOf(pipe), 1);
+            score++;
+            totalScore++;
+            document.getElementById('liveScore').textContent = totalScore;
+
+            // Update level every 5 points
+            if (totalScore % 5 === 0) {
+                increaseLevel(); // Call this function to update the level
+                pipeSpeed -= 0.5; // Increase pipe speed
+                pipeSpawnInterval = Math.max(60, pipeSpawnInterval - 10); // Decrease spawn interval
+            }
+
+            if (account) {
+                saveWalletData(account, usernameDisplay.textContent, totalScore);
+            }
+        }
+    });
+
+    if (bird.isOutOfBounds(canvas.height)) gameover = true;
+    if (gameover) {
+        // Show "Tap to Play" button only if the canvas is visible
+        if (gameCanvas.style.display !== 'none') {
+            document.getElementById('restartButton').style.display = 'block';
+        }
+        return;
+    }
+    requestAnimationFrame(draw);
+    frames++;
+}
+
+        class Pipe {
+            constructor(x, y, width, height, color, dx) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.color = color;
+                this.dx = dx;
+            }
+            draw(ctx) {
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            move() {
+                this.x += this.dx;
+            }
+            isOffscreen() {
+                return this.x + this.width < 0;
+            }
+        }
+
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const bird = new Bird(50, canvas.height / 2, 20, './bird.png', 0.5); // Replace with your bird image
+        let pipes = [];
+        let score = 0;
+        let gameover = false;
+        let frames = 0;
+        let pipeSpawnInterval = 120;
+        let pipeSpeed = -2;
+
+        function drawBackground() {
+            // Draw the background image twice to create a seamless loop
+            ctx.drawImage(backgroundImage, backgroundOffset, 0, canvas.width, canvas.height);
+            ctx.drawImage(backgroundImage, backgroundOffset + canvas.width, 0, canvas.width, canvas.height);
+
+            // Update the background offset for the next frame
+            backgroundOffset -= 1; // Adjust speed as needed
+
+            // Reset the offset when the image scrolls completely
+            if (backgroundOffset <= -canvas.width) {
+                backgroundOffset = 0;
+            }
+        }
+
+        function startGame() {
+            document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space' && !gameover) {
+            bird.flap();
+            gameStarted = true; // Game has started
+        }
+    });
+
+    canvas.addEventListener('click', function () {
+        if (!gameover) {
+            bird.flap();
+            gameStarted = true; // Game has started
+        } else {
+            restartGame();
+        }
+    });
+
+    canvas.addEventListener('touchstart', function () {
+        if (!gameover) {
+            bird.flap();
+            gameStarted = true; // Game has started
+        } else {
+            restartGame();
+        }
+    });
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBackground(); // Draw the moving background
+                drawLevel();
+                bird.draw(ctx);
+                bird.update();
+
+                if (frames % pipeSpawnInterval === 0 && !gameover) {
+                    const minHeight = 50;
+                    const maxHeight = 180;
+                    const gap = 180;
+                    const height = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+
+                    if (pipes.length === 0 || (canvas.width - pipes[pipes.length - 1].x) >= Math.abs(pipeSpeed) * pipeSpawnInterval) {
+                        pipes.push(new Pipe(canvas.width, 0, 50, height, '#250056', pipeSpeed));
+                        pipes.push(new Pipe(canvas.width, height + gap, 50, canvas.height - height - gap, '#250056', pipeSpeed));
+                    }
+                }
+
+                pipes.forEach(pipe => {
+                    pipe.draw(ctx);
+                    pipe.move();
+                    if (bird.isColliding(pipe)) gameover = true;
+                    if (pipe.isOffscreen()) {
+                        pipes.splice(pipes.indexOf(pipe), 1);
+                        score++;
+                        totalScore++;
+                        document.getElementById('liveScore').textContent = totalScore;
+
+                        if (totalScore % 5 === 0) {
+                            level++;
+                            pipeSpeed -= 0.5;
+                            pipeSpawnInterval = Math.max(60, pipeSpawnInterval - 10);
+                        }
+
+                        if (account) {
+                            saveWalletData(account, usernameDisplay.textContent, totalScore);
+                        }
+                    }
+                });
+
+                if (bird.isOutOfBounds(canvas.height)) gameover = true;
+                if (gameover) {
+                    document.getElementById('restartButton').style.display = 'block';
+                    return;
+                }
+                requestAnimationFrame(draw);
+                frames++;
+            }
+            draw();
+        }
+
+        function restartGame() {
+    bird.y = canvas.height / 2;
+    pipes = [];
+    score = 0;
+    gameover = false;
+    gameStarted = false; // Reset game started state
+    level = 1;
+    updateLevelDisplay();
+    pipeSpeed = -2;
+    pipeSpawnInterval = 120;
+    document.getElementById('restartButton').style.display = 'none'; // Hide "Tap to Play" button
+    startGame();
+}
+
+        document.getElementById('restartButton').addEventListener('click', restartGame);
+
+        const fullscreenButton = document.getElementById('fullscreenButton');
+
+        // Function to toggle fullscreen mode
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                // Enter fullscreen mode
+                if (canvas.requestFullscreen) {
+                    canvas.requestFullscreen();
+                } else if (canvas.mozRequestFullScreen) { // Firefox
+                    canvas.mozRequestFullScreen();
+                } else if (canvas.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                    canvas.webkitRequestFullscreen();
+                } else if (canvas.msRequestFullscreen) { // IE/Edge
+                    canvas.msRequestFullscreen();
+                }
+            } else {
+                // Exit fullscreen mode
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari, and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Function to handle fullscreen change
+        function handleFullscreenChange() {
+            if (document.fullscreenElement) {
+                // Resize canvas to fit fullscreen
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                fullscreenButton.textContent = 'Exit Fullscreen';
+            } else {
+                // Restore canvas to original size
+                canvas.width = 500;
+                canvas.height = 600;
+                fullscreenButton.textContent = 'Fullscreen';
+            }
+        }
+
+        // Event listener for fullscreen change
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('msfullscreenchange', handleFullscreenChange);
+
+        // Event listener for fullscreen button
+        fullscreenButton.addEventListener('click', toggleFullscreen);
+
+
+       
+        if (!account) {
+    gameCanvas.style.display = 'none';
+    restartButton.style.display = 'none';
+}
+
+
+function isTwitterUsernameSet() {
+    const twitterUsername = document.getElementById('twitterUsername').textContent;
+    return twitterUsername.trim() !== '';
+}
+
+function updateTaskButtons() {
+    const taskButtons = document.querySelectorAll('.button-task0, .button-task1, .button-task2, .button-task3');
+    taskButtons.forEach(button => {
+        if (isTwitterUsernameSet()) {
+            button.disabled = false; // Enable buttons if Twitter username is set
+        } else {
+            button.disabled = true; // Disable buttons if Twitter username is not set
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
+
+    </script>
+</body>
+</html>
