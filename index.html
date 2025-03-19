@@ -32,7 +32,7 @@
                 <li class="dlist">
                    
                     <button id="fullscreenButton">Fullscreen</button>
-                    <i   id="menu-icon" class="fas fa-outdent" aria-hidden="true"></i>
+                    <i  style="color: red; display: none;"   id="menu-icon" class="fas fa-outdent" aria-hidden="true"></i>
             </li>
             </ul>
         </div>
@@ -65,7 +65,7 @@
             <h2 class="color2">BUGNAD</h2>
             
             <p class="op"><span class="color2">BUGNAME:</span> <span id="username">Buglad</span></p>
-            <p class="op"><span class="color2">BUGNAD Points:</span> <span id="liveScore">0</span></p>
+            <p class="op"><span class="color2">BUG Points:</span> <span id="liveScore">0</span></p>
             <p class="op"><span class="color2">Social Points:</span> <span id="socialScore">0</span></p> 
            
 
@@ -109,13 +109,14 @@
 
     <ul >
         
-         
+        <li>Connect your wallet.</li>
 <li>Tap or press Spacebar to flap and keep the Bug flying.</li>
 <li>Navigate through gaps in the pipes to earn points.</li>
 <li>Earn 1 point for each pair of pipes you pass.</li>
 <li>Level up every  points—pipes move faster!</li>
 <li>Avoid hitting pipes or falling off the screen.</li>
-<li>Connect your wallet, climb the leaderboard, and qualify for Bugnad rewards!</li>
+<li> Completes Social Task to build up Points</li>
+<li> Climb the leaderboard, and qualify for Bugnad rewards!</li>
 
 
 
@@ -132,7 +133,8 @@
 <div id="socialTasks" style="display: none;" class="boundary">
     <h2 class="kl ik Submit-Wallet-heading">Submit Wallet</h2>
     <p class="tasks-p ik">Complete Tasks to Submit Wallet</p>
-    <p class="tasks-p ik">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex voluptatem pariatur err. ipsum dolor sit amet consectetur adipisicing elit. Nobis ex voluptatem pariatur err</p>
+    <p class="tasks-p ik">Completes Social Task to build up Points , accumulate more game points too to Climb the leaderboard, and qualify for Bugnad rewards!</p>
+    <p id="ppp" class="ppp"> Enter Twitter User name inorder to complete task</p>
 
     <!-- Add "Enter Username" dropdown button -->
     <button id="toggleTwitterUsernameButton">Enter Username<i id="drop-down1" class="fa-solid fa-circle-chevron-down drop-down"></i></button>
@@ -165,7 +167,7 @@
         </div>
         
         <div class="tasks task-final">
-            <p>Follow our Partners (50points)</p>
+            <p>Follow our Monad Ecosystem (50points)</p>
             <button id="button-task2" class="button-task1">
                 <div class="loader"></div>
                 <p class="task-instruction task-instruction2">Follow <i class="fa-solid fa-check check1" id="check2" style="display: none;"></i></p>
@@ -185,7 +187,7 @@
         </div>
         <div  class=" tasks">
            
-            <p class="input" id="wallet-id"  >Follow Monad(50points)</p>
+            <p class="input" id="wallet-id"  >Tweet Bugnad(50points)</p>
             <button id="button-task4" class="submit">
                 <div class="loader"></div>
                 <p class="task-instruction task-instruction1">Follow<i class="fa-solid fa-check check1" id="check4" style="display: none;"></i></p>
@@ -375,15 +377,18 @@ openGameButton.addEventListener('click', () => {
         let totalScore = 0;
        
 
-        const nameList = [
+        const nameList1 = [
+    "Flapflare", "Fluttermite", "Zephyrzipper", "Wingwhirr", "Buzzswoop", "Glideglimmer", "Aerosprite", "Flitflutter", "Whirlwing", "Snickerswoop", "Breezebuzz", "Zippyzip", "Flapdazzle", "Driftwhisk", "Puffwing", "Silkflitter", "Gossamerflap", "Whiskerwhirr", "Snapflutter", "Dandelift", "Zingwing", "Humflutter", "Twirlbug", "Flitterglide", "Bumblewhirl", "Flapflicker", "Zestwing", "Whirlybug", "Swoopmite", "Glimmerflap", "Duskflitter", "Zephyrdart", "Flutterblink", "Wingwhisper", "Zipzap", "Flitflick", "Breezebeat", "Flapwhirl", "Snappuff", "Glidegossamer", "Whiskwing", "Driftspark", "Buzzblink", "Flitterzoom", "Auraflap", "Zingflutter", "Pufflebee", "Twirlswoop", "Flutterchirp", "Wingwhistle", "Zippyspinner", "Breezeblur", "Flapwhisk", "Glimmerzip", "Snickerskitter", "Whirligig", "Flitwhirl", "Dandydrift", "Zephyrblink", "Flapspark", "Buzzwhisk", "Wingflick", "Zestyflutter", "Glidewhirr", "Puffmite", "Flitterdash", "Whiskflutter", "Bumblezip", "Swoopflare", "Zingwhirl", "Driftflutter", "Flapdart", "Snickersprite", "Gossamerzip", "Twirlwhisk", "Flitblink", "Breezeflutter", "Zephyrflick", "Wingwhiz", "Glimmerwhirl", "Buzzdash", "Flapwhiz", "Whirlyflare", "Zippyswoop", "Flutterflick", "Dandyspinner", "Puffwhirr", "Snapzip", "Glideblur", "Zestywhisk", "Flitterwing", "Bumbleflare", "Whiskyswoop", "Driftflick", "Zingflutter", "Flapblink", "Gossamerwhirl", "Twirlzip", "Snickerspark", "Breezedart", "Wingwhisk", "Flitwhiz", "Zephyrblur", "Glimmerflick"
+];
+const nameList2 = [
     "Bug", "Fly", "Wing", "Buzz", "Flap", "Glide", "Soar", "Dash", "Zoom", "Flit",
-    "Swift", "Aero", "Sky", "Cloud", "Wind", "Gust", "Breeze", "Feather", "Tail", "Beak"
+    "Swift", "Aero", "Sky", "Cloud", "Wind", "Gust", "Breeze", "Feather", "Tail", "Beak" ,
 ];
 
 function generateRandomUsername() {
-    const name1 = nameList[Math.floor(Math.random() * nameList.length)];
-    const name2 = nameList[Math.floor(Math.random() * nameList.length)];
-    return `${name1}${name2}`;
+    const name1 = nameList1[Math.floor(Math.random() * nameList1.length)];
+    const name2 = nameList2[Math.floor(Math.random() * nameList2.length)];
+    return `${name2}${name1}`;
 }
 
 async function generateUniqueUsername() {
@@ -450,21 +455,28 @@ function completeTask(taskId) {
 // Event listeners for social tasks
 // Event listeners for social tasks
 document.getElementById('button-task1').addEventListener('click', () => {
+    window.open('https://twitter.com/intent/user?screen_name=BUGNADs_', '_blank')
+
     addSocialPoints(50);
     completeTask(1); // Mark task 1 as completed
 });
 
 document.getElementById('button-task2').addEventListener('click', () => {
+    window.open('https://twitter.com/intent/user?screen_name=monad_xyz', '_blank')
     addSocialPoints(50);
     completeTask(2); // Mark task 2 as completed
 });
 
 document.getElementById('button-task3').addEventListener('click', () => {
+    window.open('https://x.com/intent/retweet?tweet_id=1897686355150331930', '_blank')
+
     addSocialPoints(50);
     completeTask(3); // Mark task 3 as completed
 });
 
 document.getElementById('button-task4').addEventListener('click', () => {
+    window.open('https://twitter.com/intent/tweet?text= The coolest Bugs are coming to Monad @BugNads_. Hop in, tap, play and evolve in the first trilogy-centric ecosystem on monad — Gaming, Socials and Artificial Intelligence. Get Whitelisted here: https://www.bugnad.xyz"', '_blank')
+
     addSocialPoints(50);
     completeTask(4); // Mark task 4 as completed
 });
